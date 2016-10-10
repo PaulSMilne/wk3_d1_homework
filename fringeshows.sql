@@ -151,16 +151,23 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
 --SELECT name FROM users;
 --SELECT name FROM shows WHERE price < 15.00;
-INSERT INTO users (name) VALUES ('Val Gibson');
+--INSERT INTO users (name) VALUES ('Val Gibson');
 --SELECT name FROM users;
 --SELECT id FROM users WHERE name = 'Val Gibson';
-INSERT INTO shows_users (show_id, user_id) VALUES (12, 25);
+--INSERT INTO shows_users (show_id, user_id) VALUES (12, 25);
 --SELECT * FROM shows_users;
 --UPDATE users SET name = 'Valerie Gibson' WHERE name = 'Val Gibson';
-DELETE FROM users WHERE name = 'Val Gibson';
+--DELETE FROM users WHERE name = 'Val Gibson';
 --SELECT name FROM users;
-DELETE FROM shows_users WHERE user_id = 25;
+--DELETE FROM shows_users WHERE user_id = 25;
 --SELECT * FROM shows;
-SELECT * FROM shows_users;
+--SELECT * FROM shows_users;
+--SELECT AVG(price) from shows;
+--SELECT name, price FROM shows ORDER BY price ASC;
+--SELECT MIN(price) from shows;
+--SELECT SUM(price) from shows;
+--SELECT SUM(price) from shows WHERE price < 20;
+
+SELECT name, price ORDER BY price DESc into new_shows FROM shows ;
 
 

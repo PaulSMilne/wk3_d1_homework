@@ -26,64 +26,88 @@ Using the SQL Database file given to you as the source of data to answer the que
   1. Select the names of all users.
 
 ```
-SELECT name FROM users;
+            SELECT name FROM users;
 ```
 
   2. Select the names of all shows that cost less than £15.
 
 ```
-SELECT name FROM shows WHERE price < 15.00;
+            SELECT name FROM shows WHERE price < 15.00;
 ```
 
   3. Insert a user with the name "Val Gibson" into the users table.
 
 ```
-INSERT INTO users (name) VALUES ('Val Gibson');
+            INSERT INTO users (name) VALUES ('Val Gibson');
 ```
 
   4. Insert a record that Val Gibson wants to attend the show "Two girls, one cup of comedy".
 
 ```
 --To get Val's user id:
-SELECT id FROM users WHERE name = 'Val Gibson';
+
+            SELECT id FROM users WHERE name = 'Val Gibson';
 
 --To insert the record:
-INSERT INTO shows_users (show_id, user_id) VALUES (25, 12);
+
+            INSERT INTO shows_users (show_id, user_id) VALUES (12, 25);
 ```
 
   5. Updates the name of the "Val Gibson" user to be "Valerie Gibson".
 
 ```
-UPDATE users SET name = 'Valerie Gibson' WHERE name = 'Val Gibson';
+            UPDATE users SET name = 'Valerie Gibson' WHERE name = 'Val Gibson';
 ```
 
   6. Deletes the user with the name 'Valerie Gibson'
 
 ```
-DELETE FROM users WHERE name = 'Valerie Gibson';
+            DELETE FROM users WHERE name = 'Valerie Gibson';
 ```
 
   7. Deletes the shows for the user you just deleted.
 
 ```
-DELETE FROM shows_users WHERE user_id = 25;
+            DELETE FROM shows_users WHERE user_id = 25;
 ```
 
 ## Section 2
 
-  This section involves more complex queries.  You will need to go and find out about aggregate funcions in SQL to answer some of the next questions.
+  This section involves more complex queries.  You will need to go and find out about aggregate functions in SQL to answer some of the next questions.
 
   9. Select the names and prices of all shows, ordered by price in ascending order.
 
+```
+            SELECT name, price FROM shows ORDER BY price ASC;
+```
+
   10. Select the average price of all shows.
+
+```
+            SELECT AVG(price) FROM shows;
+```
 
   11. Select the price of the least expensive show.
 
+  ```
+            SELECT MIN(price) FROM shows;
+  ```
+
   12. Select the sum of the price of all shows.
+
+  ```
+            SELECT SUM(price) FROM shows;
+  ```
 
   13. Select the sum of the price of all shows whose prices is less than £20.
 
+  ```
+            SELECT SUM(price) FROM shows WHERE price < 20;
+  ```
+
   14. Select the name and price of the most expensive show.
+
+
 
   15. Select the name and price of the second from cheapest show.
 
