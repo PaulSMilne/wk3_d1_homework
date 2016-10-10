@@ -149,10 +149,18 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (13, 19);
 INSERT INTO "shows_users" (show_id, user_id) VALUES (12, 20);
 INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
-SELECT name FROM users;
-SELECT name FROM shows WHERE price < 15.00;
+--SELECT name FROM users;
+--SELECT name FROM shows WHERE price < 15.00;
 INSERT INTO users (name) VALUES ('Val Gibson');
-SELECT name FROM users;
-SELECT id FROM users WHERE name = 'Val Gibson';
-INSERT INTO shows_users (show_id, user_id) VALUES (25, 12);
+--SELECT name FROM users;
+--SELECT id FROM users WHERE name = 'Val Gibson';
+INSERT INTO shows_users (show_id, user_id) VALUES (12, 25);
+--SELECT * FROM shows_users;
+--UPDATE users SET name = 'Valerie Gibson' WHERE name = 'Val Gibson';
+DELETE FROM users WHERE name = 'Val Gibson';
+--SELECT name FROM users;
+DELETE FROM shows_users WHERE user_id = 25;
+--SELECT * FROM shows;
 SELECT * FROM shows_users;
+
+

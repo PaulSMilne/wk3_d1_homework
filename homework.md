@@ -43,20 +43,31 @@ INSERT INTO users (name) VALUES ('Val Gibson');
 
   4. Insert a record that Val Gibson wants to attend the show "Two girls, one cup of comedy".
 
-  ```
+```
 --To get Val's user id:
 SELECT id FROM users WHERE name = 'Val Gibson';
 
 --To insert the record:
 INSERT INTO shows_users (show_id, user_id) VALUES (25, 12);
-  ```
+```
 
   5. Updates the name of the "Val Gibson" user to be "Valerie Gibson".
 
-  6. Deletes the user with the name 'Valerie Gibson'.
+```
+UPDATE users SET name = 'Valerie Gibson' WHERE name = 'Val Gibson';
+```
+
+  6. Deletes the user with the name 'Valerie Gibson'
+
+```
+DELETE FROM users WHERE name = 'Valerie Gibson';
+```
 
   7. Deletes the shows for the user you just deleted.
 
+```
+DELETE FROM shows_users WHERE user_id = 25;
+```
 
 ## Section 2
 
