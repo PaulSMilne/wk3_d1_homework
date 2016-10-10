@@ -25,11 +25,31 @@ Using the SQL Database file given to you as the source of data to answer the que
 
   1. Select the names of all users.
 
+```
+SELECT name FROM users;
+```
+
   2. Select the names of all shows that cost less than £15.
+
+```
+SELECT name FROM shows WHERE price < 15.00;
+```
 
   3. Insert a user with the name "Val Gibson" into the users table.
 
+```
+INSERT INTO users (name) VALUES ('Val Gibson');
+```
+
   4. Insert a record that Val Gibson wants to attend the show "Two girls, one cup of comedy".
+
+  ```
+--To get Val's user id:
+SELECT id FROM users WHERE name = 'Val Gibson';
+
+--To insert the record:
+INSERT INTO shows_users (show_id, user_id) VALUES (25, 12);
+  ```
 
   5. Updates the name of the "Val Gibson" user to be "Valerie Gibson".
 

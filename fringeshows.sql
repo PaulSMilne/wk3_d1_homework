@@ -149,3 +149,10 @@ INSERT INTO "shows_users" (show_id, user_id) VALUES (13, 19);
 INSERT INTO "shows_users" (show_id, user_id) VALUES (12, 20);
 INSERT INTO "shows_users" (show_id, user_id) VALUES (11, 21);
 
+SELECT name FROM users;
+SELECT name FROM shows WHERE price < 15.00;
+INSERT INTO users (name) VALUES ('Val Gibson');
+SELECT name FROM users;
+SELECT id FROM users WHERE name = 'Val Gibson';
+INSERT INTO shows_users (show_id, user_id) VALUES (25, 12);
+SELECT * FROM shows_users;
